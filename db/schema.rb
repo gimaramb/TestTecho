@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_26_184032) do
+ActiveRecord::Schema.define(version: 2018_04_26_193333) do
 
   create_table "comunidads", force: :cascade do |t|
-    t.string "nombre", null: false
-    t.float "comuna"
+    t.string "nombre"
+    t.string "comuna"
   end
 
 end

@@ -1,0 +1,16 @@
+<% if @comunidades.blank? %>
+<p>Actualmente no hay comunidades en el sistema.</p> 
+<% else %>
+<p>Estas son las comunidades que axisten actualmente</p>
+
+<ul id="comunidades">
+	<% @comunidades.each do |c| %>
+	<li><%= link_to c.nombre, {:action => 'show', :id => c.id} %>
+	<b> <%= link_to 'Edit', {:action => "edit", :id => c.id} %></b>
+	<b> <%= link_to 'Delete', {:action => "delete", :id => c.id}, :confirm => "Are you sure you want to delete this item?" %></b>
+	</li> 
+	<% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Book", {:action => 'new' }%></p>

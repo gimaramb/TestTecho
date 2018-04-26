@@ -1,0 +1,17 @@
+<h1> Agregar Nueva Comunidad <h1>
+
+<%= form_tag :action => 'create' do %>
+
+<p><label for = 'nombre'> Nombre </label>:
+
+<%= text_field 'comunidads', 'nombre' %></p>
+
+<p><label for="comuna">Comuna</label>:
+
+<%= text_field 'comunidads', 'comuna' %></p>
+
+<%= submit_tag "Create" %>
+
+<%end%>
+
+<%= link_to 'Back', {:action => 'list'} %>
